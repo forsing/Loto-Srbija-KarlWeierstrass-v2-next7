@@ -1,0 +1,95 @@
+3_KarlWeierstrass_NEXT7_2b3e — Hurst/R-S + NIST baterija (POGODNO)
+============================================================
+
+KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
+
+  CSV izvucenih:        /Users/4c/Desktop/GHQ/data/loto7_4624_k43.csv
+  Ucitano izvlacenja:    4624
+  C(39,7):              15,380,937
+  f(t) = lex-indeks izvucene kombinacije u skupu svih 39C7
+
+
+============================================================
+KORAK 2b3e: Aparat 2b Hurst/R-S + Test 3e NIST baterija
+============================================================
+
+  PNG:                  /Users/4c/Desktop/GHQ/KarlWeierstrass/3_KarlWeierstrass_NEXT7_2b3e.png
+
+Binarizacija rolling/local Hurst niza:
+  bit = 1 ako je lokalni H > 0.5, inace 0
+  n bits                = 31
+  zeros                 = 0
+  ones                  = 31
+
+NIST-style testovi nad rolling H bitovima (prolaz ako p > 0.05):
+  test                         p-value              stat      pass
+  Monobit frequency         0.00000003        5.56776436     False
+  Runs                      0.00000000        0.00000000     False
+  Block frequency           0.00002498       24.00000000     False
+  Cumulative sums           0.00000003       31.00000000     False
+  Approx entropy            0.00000000        0.00000000     False
+
+Detalji rolling H:
+  Runs pi               = 1.00000000
+  Block size            = 8
+  Block count           = 3
+  Approx entropy m      = 2
+  Approx entropy chi2   = 42.97512519
+  Approx entropy df     = 2
+  pass count            = 0/5
+  interpret.            = rolling H bitovi padaju vise NIST-style testova
+
+Kontrola: NIST-style testovi nad f(t) binarizacijom:
+  test                         p-value              stat      pass
+  Monobit frequency         1.00000000        0.00000000      True
+  Runs                      0.37758598    2,342.00000000      True
+  Block frequency           0.15033446       44.75000000      True
+  Cumulative sums           0.26371776       76.00000000      True
+  Approx entropy            0.01883451        0.69228817     False
+  pass count            = 4/5
+  f(t) runs pi          = 0.50000000
+  f(t) block count      = 36
+  f(t) approx chi2      = 7.94412940
+  f(t) approx df        = 2
+
+Vreme KORAKA 2b3e: 0:00:03 (3.3 s)
+Ukupno vreme:       0:00:03 (3.5 s)
+
+============================================================
+PREDIKCIJA 7: NEXT7 / 2b3e / rolling H bit rezim
+============================================================
+
+Model:
+  Rolling H bitovi padaju NIST testove jer su svi H>0.5.
+  To je grubi rezimski filter: tretira se kao stabilno perzistentan rezim.
+  Prognoza kombinuje lokalni trend, zadnji inkrement i lokalnu varijansu.
+
+Parametri:
+  rolling H zeros        = 0
+  rolling H ones         = 31
+  persistent ratio       = 1.00000000
+  mean rolling H         = 0.59744976
+  zadnji rolling H       = 0.62382045
+  trend strength         = 0.64966508
+  local window           = 768
+  lokalni slope          = -739.26066925
+  lokalni resid std      = 4,500,683.77058056
+  recent mean dX         = -6,859.22555411
+  recent std dX          = 6,269,244.17079193
+  zadnji dX              = -2,143,496.00000000
+  zadnji lex             = 513,114
+  pred. inkrement        = -1,394,957.53484601
+
+Glavna prognoza:
+  pred. lex float        = -881,843.53484601
+  pred. lex              = 1
+  pred. kombinacija      = (1, 2, 3, 4, 5, 6, 7)
+
+Kandidati trend + lokalna varijansa:
+         z           lex  kombinacija
+     -1.28             1  (1, 2, 3, 4, 5, 6, 7)
+      0.43     1,813,931  (1, 7, 16, 18, 21, 24, 36)
+      0.84     4,384,322  (2, 9, 11, 16, 27, 34, 36)
+      1.28     7,142,789  (4, 5, 9, 10, 14, 21, 25)
+
+Vreme PREDIKCIJE 7: 0:00:00 (0.0 s)
