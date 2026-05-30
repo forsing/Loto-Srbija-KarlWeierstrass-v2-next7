@@ -3,8 +3,8 @@
 
 KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
 
-  CSV izvucenih:        /Users/4c/Desktop/GHQ/data/loto7_4624_k43.csv
-  Ucitano izvlacenja:    4624
+  CSV izvucenih:        /data/loto7_4624_k43.csv
+  Ucitano izvlacenja:   4624
   C(39,7):              15,380,937
   f(t) = lex-indeks izvucene kombinacije u skupu svih 39C7
 
@@ -13,7 +13,7 @@ KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
 KORAK 2b3e: Aparat 2b Hurst/R-S + Test 3e NIST baterija
 ============================================================
 
-  PNG:                  /Users/4c/Desktop/GHQ/KarlWeierstrass/3_KarlWeierstrass_NEXT7_2b3e.png
+  PNG:                  /3_KarlWeierstrass_NEXT7_2b3e.png
 
 Binarizacija rolling/local Hurst niza:
   bit = 1 ako je lokalni H > 0.5, inace 0
@@ -88,8 +88,8 @@ Glavna prognoza:
 Kandidati trend + lokalna varijansa:
          z           lex  kombinacija
      -1.28             1  (1, 2, 3, 4, 5, 6, 7)
-      0.43     1,813,931  (1, 7, 16, 18, 21, 24, 36)
-      0.84     4,384,322  (2, 9, 11, 16, 27, 34, 36)
-      1.28     7,142,789  (4, 5, 9, 10, 14, 21, 25)
+      0.43     1,813,931  (1, x, 16, y, 21, z, 36)
+      0.84     4,384,322  (2, x, 11, y, 27, z, 36)
+      1.28     7,142,789  (4, x, 9, y, 14, z, 25)
 
 Vreme PREDIKCIJE 7: 0:00:00 (0.0 s)
