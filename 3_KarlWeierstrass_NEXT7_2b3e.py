@@ -26,7 +26,7 @@ from scipy import stats
 
 T0 = time.time()
 
-CSV_DRAWS = "/Users/4c/Desktop/GHQ/data/loto7_4624_k43.csv"
+CSV_DRAWS = "/data/loto7_4624_k43.csv"
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PNG_PATH = os.path.join(HERE, "3_KarlWeierstrass_NEXT7_2b3e.png")
