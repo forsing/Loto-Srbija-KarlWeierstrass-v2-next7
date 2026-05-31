@@ -6,7 +6,7 @@
 | **qiskit-machine-learning** | 0.8.3   |
 | **qiskit-ibm-runtime**      | 0.43.0  |
 | **macOS**                   | Tahoe 26|
-| **Apple**                   | M1      |
+| **Apple MacBook Pro**       | M1 16G  |
 
 
 https://github.com/forsing
